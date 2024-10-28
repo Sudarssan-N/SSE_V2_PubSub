@@ -11,9 +11,9 @@ public class CorsConfig implements WebFluxConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/sse/**")
                 .allowedOrigins(
+                        "https://whlsecentralsup--temp2.sandbox.lightning.force.com",
                         "https://wise-hawk-hdi2dp-dev-ed.trailblaze.lightning.force.com",  // Your Salesforce domain
-                        "https://llama-upright-possibly.ngrok-free.app",                  // Your ngrok custom domain
-                        "https://whlsecentralsup--temp2.sandbox.lightning.force.com",      // Another Salesforce sandbox
+                        "https://llama-upright-possibly.ngrok-free.app",                  // Your ngrok custom domai
                         "http://localhost:8080"                                           // Localhost for local testing
                 )
                 .allowedMethods("GET", "POST", "OPTIONS")
